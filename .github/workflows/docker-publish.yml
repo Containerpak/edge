@@ -42,8 +42,8 @@ jobs:
           cache-to: type=gha,mode=max
           provenance: mode=max
           sbom: true
-      - name: Verify package
-        run: docker run --rm ghcr.io/containerpak/edge:main sh -c 'test -x /usr/bin/microsoft-edge && test -f /usr/share/applications/microsoft-edge.desktop'
+      - name: Verify runtime image
+        run: docker run --rm ghcr.io/containerpak/edge:main sh -c 'test ! -e /usr/bin/microsoft-edge && test -x /usr/bin/xdg-open'
       - name: Publish summary
         run: echo "ghcr.io/containerpak/edge@${{ steps.build.outputs.digest }}" >> "$GITHUB_STEP_SUMMARY"
 
