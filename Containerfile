@@ -1,12 +1,9 @@
-FROM ubuntu:26.04 AS source
-
-ADD --checksum=sha256:38161c8c49dc88f1dc1c9797d78a63064611e1490b8c2ca290afa0677027ef8b \
-    https://packages.microsoft.com/repos/edge/pool/main/m/microsoft-edge-stable/microsoft-edge-stable_151.0.4129.78-1_amd64.deb \
-    /tmp/edge.deb
-
 FROM ghcr.io/containerpak/gtk3:main
 
-RUN --mount=type=bind,from=source,source=/tmp/edge.deb,target=/run/edge.deb \
-    apt-get update && \
-    apt-get install -y /run/edge.deb && \
+LABEL org.opencontainers.image.source="https://github.com/Containerpak/edge"
+
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+    ca-certificates fonts-liberation libcups2t64 libcurl4t64 \
+    libnss3 libvulkan1 wget xdg-utils && \
     cpak-clean-junk
