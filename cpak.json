@@ -3,14 +3,14 @@
   "manifest_version": "3.0",
   "name": "Microsoft Edge",
   "description": "Microsoft Edge web browser.",
-  "version": "152.0.4191.66-1",
+  "version": "153.0.4234.32-1",
   "image": "ghcr.io/containerpak/edge@sha256:c29344c9f4915b6f35c008f7d0e7f50b17bc070491e6185fe6cb758eb321bfa5",
   "runtime_sources": [
     {
-      "name": "microsoft-edge-stable_152.0.4191.66-1_amd64.deb",
-      "url": "https://packages.microsoft.com/repos/edge/pool/main/m/microsoft-edge-stable/microsoft-edge-stable_152.0.4191.66-1_amd64.deb",
-      "sha256": "186c19f9d6079d174efbb4ef331ccc1e11d139b6f7a8ea3b0db75f9b17e25f0d",
-      "size": 195767486,
+      "name": "microsoft-edge-stable_153.0.4234.32-1_amd64.deb",
+      "url": "https://packages.microsoft.com/repos/edge/pool/main/m/microsoft-edge-stable/microsoft-edge-stable_153.0.4234.32-1_amd64.deb",
+      "sha256": "1e7ed943dc84d22036f906691406d2530753df1b4923277234ea1006713b97d1",
+      "size": 192702334,
       "installer": "dpkg"
     }
   ],
