@@ -4,7 +4,7 @@
   "name": "Microsoft Edge",
   "description": "Microsoft Edge web browser.",
   "version": "153.0.4234.32-1",
-  "image": "ghcr.io/containerpak/edge@sha256:2557be9224923689aecda257cc477dfc405119c76417d00182f07abaa846505c",
+  "image": "ghcr.io/containerpak/edge@sha256:4e10fdd43b9367d371ae807e97bd79f773d0cd222b0f6c05b1e11fbb323e1621",
   "runtime_sources": [
     {
       "name": "microsoft-edge-stable_153.0.4234.32-1_amd64.deb",
